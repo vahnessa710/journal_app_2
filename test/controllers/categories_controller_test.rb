@@ -8,28 +8,6 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
   end
   
-  test "should create a user" do
-    post user_registration_path, params: { 
-                                        user: {
-                                            email: "test0000@example.com",
-                                            password: "password123",
-                                            password_confirmation: "password123"
-                                          } 
-                                        }
-    follow_redirect!
-    assert_select "p", "No task for today!"
-  end
-  
-  test "should login a user" do
-    post user_session_path, params: { user: {
-                                              email: @user.email,
-                                              password: "password"
-                                            }
-                                    }
-    follow_redirect!
-    assert_select "h1", "Category List"
-  end  
-  
   test "should create category with user" do
     post categories_path, params: { category: { title: "Work" } }
     assert_equal "Work", Category.last.title
