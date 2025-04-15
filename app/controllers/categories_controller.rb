@@ -30,8 +30,7 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update(category_params)
-      flash.alert = "Category has been updated successfully."
-      redirect_to category_path
+      redirect_to category_path, alert: "Category has been updated successfully."
     else
       flash.alert = "Error in updating category."
       render :edit, status: :unprocessable_entity
@@ -40,8 +39,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category.destroy
-    flash.alert = "Category has been deleted successfully."
-    redirect_to categories_path
+    redirect_to categories_path, alert: "Category has been deleted successfully."
   end
 
   private
