@@ -32,5 +32,4 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     delete category_task_path(@category, @task)
     assert_equal 1, Task.count
   end
-
 end

@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user! 
   before_action :set_category, only: %i[show edit update destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   def index
     @categories = current_user.categories
@@ -18,9 +19,9 @@ class CategoriesController < ApplicationController
   def create
     @category = current_user.categories.new(category_params)
     if @category.save
-      flash.alert = "New category successfully created."
-      redirect_to categories_path
+      redirect_to categories_path, alert: "New category successfully created."
     else 
+      flash.alert = "Error in creating new category."
       render :new, status: :unprocessable_entity
     end
   end
@@ -52,5 +53,8 @@ class CategoriesController < ApplicationController
   def set_category
     @category = current_user.categories.find(params[:id])
   end
-  
+
+  def record_not_found
+    redirect_to categories_path, alert: 'record does not exist'
+  end
 end
