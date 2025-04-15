@@ -1,0 +1,18 @@
+<%= form_with model: [category, task], class: "task-form-wrapper" do |form| %>
+    <div class="task-form-field">
+        <%= form.label :task, class: "task-form-label" %><br>
+        <%= form.text_field :description, class: "task-form-input" %>
+        <% if @task.errors.full_messages_for(:description).second %>
+            <div class="task-form-error"><%= @task.errors.full_messages_for(:description).second %></div>
+        <% end %>
+        <div>
+            <%= form.label :due_date, class: "task-form-date-label"  %>
+        </div>
+        <div>
+            <%= form.date_field :due_date, class: "task-form-date"  %>
+        </div>
+    </div>
+    <div class="task-form-actions">
+        <%= form.submit %>
+    </div>
+<% end %>

@@ -1,0 +1,17 @@
+<div class = "tasks-due-today-wrapper">
+    <div class = "tasks-and-date-title-wrapper">
+        <h2 class= "section-title">Tasks for Today 🔔︎</h2>
+        <p class = "date-today-title"><%= Date.today %></p> 
+    </div>
+    <hr>
+    <% if @due_today.count.zero?%>
+        <p class = "empty-msg">No tasks for today!</p>
+        <% else %>
+            <% @due_today.each do |task|%>
+            <div class="task-due-today-item">📌︎ <%= task.description%></div>
+        <%end%>
+    <%end%>
+</div>
+<div>
+    <p><%= link_to 'Home', categories_path, class: "home-link-due-today" %></p>
+</div>

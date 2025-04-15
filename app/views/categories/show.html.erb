@@ -1,0 +1,32 @@
+<div class = "categories-show">
+  <h1 class="category-title"><i class="fa-solid fa-rocket"></i> <%= @category.title %></h1>
+    <div>
+      <%= link_to edit_category_path, class: 'edit-link-button' do %> 
+        <i class="fa-solid fa-pen"></i>
+      <%end%>
+      <%= link_to category_path(@category), class: 'delete-link-button', data: {
+                                                                              turbo_method: :delete,
+                                                                              turbo_confirm: "Are you sure?"} do %>
+        <i class="fa-solid fa-trash-can"></i>
+      <%end%>
+    </div>
+  <div class="task-specific-categories-wrapper">
+      <p class ="task-specific-categories-header"><i class="fa-solid fa-list-check"></i> Tasks</p>
+        <div>
+          <%= link_to new_category_task_path(@category), class: "add-task-button-show" do %>
+            <i class="fa-solid fa-plus"></i> Add
+          <%end%>
+        </div>
+      <% @tasks.each do |task| %>
+        <div class ="task-specific-categories-links">
+          <%= link_to category_task_path(@category, task) do %>
+            <p>📌︎ <%= task.description %></p>
+            <p class ="task-specific-categories-date">Due Date: <%= task.due_date %> </p>
+          <% end %> 
+        </div>
+      <% end %>
+  </div>
+</div>
+<div>
+    <p><%= link_to 'Home', categories_path, class: "home-link-show" %></p>
+</div>

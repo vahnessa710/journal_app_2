@@ -1,0 +1,127 @@
+.categories-show {
+    max-width: 70%;
+    margin: 40px auto;
+    padding: 32px;
+    background-color: #bbc6b7;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .category-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .edit-link-button,
+  .delete-link-button,
+  .add-task-button-show {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  .add-task-button-show{
+    background-color: hsl(153, 40%, 35%);
+    margin-left: 15px;
+    margin-bottom:35px;
+  }
+
+  .add-task-button-show:hover {
+    background-color: hsl(153, 40%, 25%);
+    transform: translateY(-1px);
+  }
+
+  .edit-link-button {
+    background-color: hsl(153, 40%, 35%);
+  }
+  
+  .edit-link-button:hover {
+    background-color: hsl(153, 40%, 25%);
+    transform: translateY(-1px);
+  }
+  
+  .delete-link-button {
+    background-color: hsl(6, 78%, 47%);
+  }
+  
+  .delete-link-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+  }
+  
+  .task-specific-categories-wrapper {
+    margin-top: 30px;
+    background-color: hsl(230, 8%, 26%);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    color: #d9d9d9;
+  }
+  
+  .task-specific-categories-header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    margin-left: 16px;
+  }
+  
+  .task-specific-categories-links {
+    font-size: 16px;
+    padding: 8px;
+    color: #333;
+    border-radius: 8px;
+    padding-left: 12px;
+    transition: background-color 0.2s ease;
+    border: solid 0.5px rgba(217, 217, 217, 0.5);
+    width: 30%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  
+  .task-specific-categories-links a {
+    text-decoration: none;
+    color: #d9d9d9;
+  }
+  
+  
+  .task-specific-categories-date {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 16px;
+    margin-left: 12px;
+  }
+
+  .task-description-wrapper{
+    border: solid 1px #d9d9d9;
+    border-radius: 8px;
+    width: 40%;
+  }
+  
+  .home-link-show {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 250px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-link:hover {
+    background-color: #eee;
+  }
+  

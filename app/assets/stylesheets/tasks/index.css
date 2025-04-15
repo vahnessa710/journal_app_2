@@ -1,0 +1,55 @@
+.tasks-due-today-header {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #d9d9d9;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .date-today-title{ 
+    margin-top:35px;
+    font-size: 14px;
+    text-align: center;
+    color: #d9d9d9;
+  }
+
+  .tasks-and-date-title-wrapper{
+    display: flex;
+  }
+  
+  .tasks-due-today-wrapper {
+    max-width: 70%;
+    margin: 50px auto 40px auto;
+    padding: 32px;
+    background-color: hsl(230, 8%, 26%);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  }
+  
+  .task-due-today-item {
+    padding: 12px 16px;
+    /* background-color: hsl(104, 12%, 85%); */
+    margin-bottom: 12px;
+    /* border-left: 5px solid #2d6a4f; */
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    color: #d9d9d9;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .home-link-due-today {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 250px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }

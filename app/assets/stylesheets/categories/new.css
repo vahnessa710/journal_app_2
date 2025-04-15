@@ -1,0 +1,22 @@
+.new-category-title{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.home-link-category-new {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 530px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-link-category-new:hover {
+    background-color: #eee;
+  }

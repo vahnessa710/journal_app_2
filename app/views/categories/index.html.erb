@@ -1,0 +1,54 @@
+<div class = "index-container">
+    <div class="user-email-box">
+        <p class = "everyday-nav">📓︎ Everyday</p>
+        <p class="user-email-text">✉ <%= current_user.email %></p>
+        <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: "logout-button" %>
+    </div>
+    <div class = "tasks-categories-wrapper">
+        <div class="tasks-wrapper">
+            <div class = "task-title-and-bell">
+                <h2><%= link_to 'Tasks for Today', due_today_path, class: "section-title" %></h2>
+                <%= link_to '🔔︎', due_today_path, class: "notification-bell" %>
+            </div>
+            <hr>
+            <%if @due_today.count.zero?%>
+                <p class = " empty-msg" >No task for today! </p>
+            <%else%>
+                <% @due_today.each do |task| %>
+                    <div class="task-item">
+                        <%= link_to category_task_path(task.category, task), class: "task-desc"  do %>
+                            <span> 📌︎ <%=task.description%> </span>
+                        <%end%>
+                        <span class="task-date">(<%= task.due_date.to_date %>)</span>
+                    </div>
+                <% end %>
+            <%end%>
+        </div>
+        <div class="categories-wrapper">
+            <div class ="header-category-list-wrapper">
+                <h1 class="categories-section-title">Category List</h1>
+                <h1><i class="fa-solid fa-rocket"></i></h1>
+            </div>
+            <hr>
+                <div class = "create-button" >
+                    <%= link_to "Create a Category", new_category_path%>
+                </div>
+                <div>
+                    <% if @categories.count.zero? %>
+                        <p class="empty-msg">No categories yet.</p>
+                        <% else %>
+                                <% @categories.each do |category| %>
+                                        <%= link_to category_path(category), class: "category-list" do %>
+                                            <i class="fa-solid fa-rocket"></i>
+                                            <span class = "category-item"><%= category.title %></span>
+                                        <% end %>
+                                <% end %>
+                    <% end %>
+                </div>
+                </div>       
+        </div>
+    </div>
+
+    
+</div>
+

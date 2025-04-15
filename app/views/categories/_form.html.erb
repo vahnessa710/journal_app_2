@@ -1,0 +1,14 @@
+<%= form_with model: category, class: "category-form-wrapper" do |form|%>
+    <div class="category-form-field">
+        <%= form.label :title, class: "category-form-label" %><br>
+        <%= form.text_field :title, class: "category-form-input" %>
+        <% if category.errors.full_messages_for(:title).second %>
+            <div class="category-form-error">
+                <%= category.errors.full_messages_for(:title).second %>
+            </div>
+        <% end %>
+    </div>
+    <div class="category-form-actions">
+        <%= form.submit "Save", class: "category-submit-button" %>
+    </div>
+<% end %>

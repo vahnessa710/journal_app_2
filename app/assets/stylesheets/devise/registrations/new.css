@@ -1,0 +1,98 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color:  #e0e0e0;
+  color: #656464;
+}
+
+.login-form-wrapper {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 32px;
+  background-color: #e1e1e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-input {
+  background-color: hsl(0, 0%, 92%);
+  width: 93%;
+  padding: 10px 12px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  margin-top: 0;
+}
+
+.form-input:focus {
+  border-color: hsl(0, 0%, 83%);
+  outline: none;
+}
+
+.remember-me {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.actions {
+  margin-top: 24px;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #efefef;
+  color: #656464;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: hsl(0, 0%, 84%);
+  transform: translateY(-1px);
+}
+
+.devise-links {
+  text-align: center;
+  font-size: 14px;
+}
+
+.devise-links a {
+  color: #656464;
+  text-decoration: none;
+  gap: 10px;
+
+}
+
+.devise-links a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  margin-bottom: 8px;
+  margin-left: 18x;
+  font-size: 14px;
+  color: #e74c3c;
+}
+.error-message p {
+  margin: 0;
+}
+
+.already{
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 16px;
+  justify-content: center;
+  vertical-align: middle;
+  margin-bottom: 0;
+}

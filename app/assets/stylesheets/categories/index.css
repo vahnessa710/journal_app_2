@@ -1,0 +1,235 @@
+.index-container{
+    padding-top: 20px;
+}
+
+.user-email-box {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f9f9f9;
+    padding: 4px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    height: 60px;
+  }
+
+  .user-email-text {
+    font-weight: 500;
+    margin-left: auto;
+  }
+
+  .logout-button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: inline-block;
+  }
+
+  .logout-button:hover {
+    background-color: #111;
+    transform: translateY(-1px);
+  }
+
+  .logout-button:active {
+    transform: scale(0.98);
+  }
+
+.everyday-nav{
+    font-size: 25px;
+    font-weight: bold;
+    color: #656464;
+}
+
+.tasks-wrapper{
+    width: 70%;
+    margin: 40px auto;
+    padding: 32px;
+    background-color: hsl(230, 8%, 26%);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section-title { 
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 4px;
+    color: #d9d9d9;
+    flex:1;
+    text-decoration: none;
+  }
+
+  .notification-bell {
+    font-size: 35px;
+    text-align: right;
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
+    user-select: none;
+    color: #d9d9d9;
+    text-decoration: none;
+  }
+
+  .task-title-and-bell{
+    display: flex;
+    justify-content: space-between;
+  }
+
+hr{
+    margin-top:0px;
+    margin-bottom: 18px;
+}
+
+.task-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #d9d9d9; /* Matching your task-item text color */
+  text-decoration: none;
+  padding: 8px 0;
+  display: block;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+  padding:10px;
+}
+
+.task-desc:hover {
+  color: #fff;
+  border-left-color: #2d6a4f; /* Your brand green color */
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+
+.task-desc span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-desc:active {
+  transform: scale(0.98);
+}
+
+.header-category-list-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories-wrapper{
+    max-width: 70%;
+    margin: 40px auto;
+    padding: 32px;
+    background-color: #bbc6b7;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.categories-section-title{
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    /* border-bottom: 1px solid #656464; */
+    padding-bottom: 4px;
+    color: #656464;
+}
+  
+.task-item {
+    padding: 8px 0;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    color: #d9d9d9;
+  }
+  
+  .task-date {
+    color: #aaa;
+    font-size: 13px;
+    font-style: italic;
+  }
+  
+  .empty-msg {
+    color: #999;
+    font-size: 14px;
+    font-style: italic;
+    padding: 8px 0;
+  }
+  
+  .category-list {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    gap: 12px;
+    padding: 30px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #444;
+    border: 1px solid #e0e0e0;
+  }
+
+  .category-list:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: #d0d0d0;
+  }
+  
+  
+  .category-link {
+    color: #444;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+    border: solid 1px red;
+  }
+
+  .category-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  
+  .category-item-wrapper:hover {
+    background-color: hsl(104, 12%, 80%);
+    color: #000;
+    border-color: #ccc;
+  }
+
+
+  .create-button {
+    display: flex;
+    margin: 30px auto;
+  }
+  
+  .create-button a {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #2d6a4f;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .create-button a:hover {
+    background-color: #1b4332;
+    transform: translateY(-2px);
+  }
+  
+  .create-button a:active {
+    transform: scale(0.98);
+  }
+

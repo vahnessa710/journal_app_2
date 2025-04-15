@@ -1,0 +1,30 @@
+<div class = "main-container">
+  <h1 class="everyday-title"> 📓︎ Everyday</h1>
+
+  <div class="login-form-wrapper">
+    <p class = "login-title">LOGIN</p>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.email_field :email, class: "form-input", autofocus: true, autocomplete: "email",  placeholder: "✉ Email" %>
+      </div>
+
+      <div class="field"> 
+        <%= f.password_field :password, class: "form-input", autocomplete: "current-password",  placeholder: "🔒︎ Password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field remember-me">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in", class: "login-button" %>
+      </div>
+    <% end %>
+    <div>
+    <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
