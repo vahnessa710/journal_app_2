@@ -2,7 +2,7 @@ require "test_helper"
 
 class TasksControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
-
+  
   setup do
     @user = users(:one)
     sign_in @user
@@ -28,8 +28,13 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should delete a task under a specific category with user" do
-    assert_equal 2, Task.count
+    assert_equal 1, @user.tasks.count
     delete category_task_path(@category, @task)
-    assert_equal 1, Task.count
+    assert_equal 0, @user.tasks.count
+  end
+
+  test "should view tasks for today with user" do
+    get due_today_path
+    assert_select "h2", "Tasks for Today 🔔︎"
   end
 end

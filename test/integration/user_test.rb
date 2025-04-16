@@ -1,6 +1,6 @@
 require "test_helper"
 
-class UsersFlowTest < ActionDispatch::IntegrationTest
+class UserFlowTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do

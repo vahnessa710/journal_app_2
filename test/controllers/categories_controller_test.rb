@@ -6,6 +6,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @user = users(:one)
     sign_in @user
+    @category = categories(:one)
   end
   
   test "should create category with user" do
@@ -14,28 +15,18 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should view a category" do
-    category = categories(:one)
-    get category_path(category)
+    get category_path(@category)
     assert_select "h1", "Work"
   end
 
   test "should edit category with user" do
-    category = categories(:one) 
-    patch category_path(category), params: { category: { title: "Work is life" } }
-    category.reload
-    assert_equal "Work is life", category.title
+    patch category_path(@category), params: { category: { title: "Work is life" } }
+    @category.reload
+    assert_equal "Work is life", @category.title
   end
 
   test "should delete category with user" do
-    category = categories(:one)
-    assert_equal 2, Category.count
-    delete category_path(category)
-    assert_equal 1, Category.count
+    delete category_path(@category)
+    assert_equal 0, @user.categories.count
   end
-
-  test "should view tasks for today with user" do
-    get due_today_path
-    assert_select "h2", "Tasks for Today 🔔︎"
-  end
-  
 end

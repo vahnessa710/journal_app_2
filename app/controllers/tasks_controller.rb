@@ -1,8 +1,6 @@
 class TasksController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_category, except: [:index]
   before_action :set_task, except: [:index, :new, :create]
-  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   
   def index
     @tasks = current_user.tasks.includes(:category)
@@ -53,9 +51,5 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:description, :due_date)
-  end
-  
-  def record_not_found
-    redirect_to categories_path, alert: 'record does not exist'
   end
 end

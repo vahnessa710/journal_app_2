@@ -2,8 +2,5 @@
 
 one:
   description: Software Engineer
+  due_date: Date.today
   category: one
-
-two:
-  description: wash dishes
-  category: two
